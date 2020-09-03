@@ -1,0 +1,254 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006ad20f20, pid=22096, tid=0x00000000000008dc
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_121-b13) (build 1.8.0_121-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [libgmp-10.dll+0x60f20]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000029c2800):  JavaThread "main" [_thread_in_native, id=2268, stack(0x0000000002390000,0x0000000002490000)]
+
+siginfo: ExceptionCode=0xc0000005, ExceptionInformation=0x0000000000000008 0x000000006ad20f20
+
+Registers:
+RAX=0x000000000248e270, RBX=0x000000001c11b3a0, RCX=0x000000000248e280, RDX=0x000000000248e500
+RSP=0x000000000248e1f8, RBP=0x000000000248f698, RSI=0x000000000248f3c8, RDI=0x000000000248e230
+R8 =0x0000000000000002, R9 =0x000000000248e4f0, R10=0x000000000248e0e0, R11=0x000000000248e420
+R12=0x0000000000000000, R13=0x000000001c11b3a0, R14=0x000000000248f6c8, R15=0x00000000029c2800
+RIP=0x000000006ad20f20, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x000000000248e1f8)
+0x000000000248e1f8:   00007ff92dc634cc 000000000248e270
+0x000000000248e208:   cccccccc00000002 cccccccccccccccc
+0x000000000248e218:   cccccccccccccccc cccccccc00000002
+0x000000000248e228:   000000000248e500 000000000248e340
+0x000000000248e238:   00007ff92dc2667d 000000000248e270
+0x000000000248e248:   000000000248e4f0 cccccccccccccccc
+0x000000000248e258:   cccccccccccccccc cccccccccccccccc
+0x000000000248e268:   cccccccccccccccc 000000000248e280
+0x000000000248e278:   0000000000000008 cccccccccccccccc
+0x000000000248e288:   cccccccccccccccc cccccccccccccccc
+0x000000000248e298:   cccccccccccccccc cccccccccccccccc
+0x000000000248e2a8:   cccccccccccccccc cccccccccccccccc
+0x000000000248e2b8:   cccccccccccccccc ffffffff00000002
+0x000000000248e2c8:   cccccccccccccccc cccccccccccccccc
+0x000000000248e2d8:   cccccccccccccccc cccccccccccccccc
+0x000000000248e2e8:   cccccccccccccccc cccccccccccccccc 
+
+Instructions: (pc=0x000000006ad20f20)
+0x000000006ad20f00:   45 57 32 c0 b3 cf ab 40 bd cf ec 61 8e dd a3 68
+0x000000006ad20f10:   02 27 1f 22 42 ad 4f a9 00 00 00 00 00 00 00 00
+0x000000006ad20f20:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x000000006ad20f30:   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+Register to memory mapping:
+
+RAX=0x000000000248e270 is pointing into the stack for thread: 0x00000000029c2800
+RBX={method} {0x000000001c11b3a8} 'Default_Delaunay_mesher_2_refine_mesh' '(JLCGAL/Mesh_2/Default_Delaunay_mesher_2;)V' in 'CGAL/Mesh_2/CGAL_Mesh_2JNI'
+RCX=0x000000000248e280 is pointing into the stack for thread: 0x00000000029c2800
+RDX=0x000000000248e500 is pointing into the stack for thread: 0x00000000029c2800
+RSP=0x000000000248e1f8 is pointing into the stack for thread: 0x00000000029c2800
+RBP=0x000000000248f698 is pointing into the stack for thread: 0x00000000029c2800
+RSI=0x000000000248f3c8 is pointing into the stack for thread: 0x00000000029c2800
+RDI=0x000000000248e230 is pointing into the stack for thread: 0x00000000029c2800
+R8 =0x0000000000000002 is an unknown value
+R9 =0x000000000248e4f0 is pointing into the stack for thread: 0x00000000029c2800
+R10=0x000000000248e0e0 is pointing into the stack for thread: 0x00000000029c2800
+R11=0x000000000248e420 is pointing into the stack for thread: 0x00000000029c2800
+R12=0x0000000000000000 is an unknown value
+R13={method} {0x000000001c11b3a8} 'Default_Delaunay_mesher_2_refine_mesh' '(JLCGAL/Mesh_2/Default_Delaunay_mesher_2;)V' in 'CGAL/Mesh_2/CGAL_Mesh_2JNI'
+R14=0x000000000248f6c8 is pointing into the stack for thread: 0x00000000029c2800
+R15=0x00000000029c2800 is a thread
+
+
+Stack: [0x0000000002390000,0x0000000002490000],  sp=0x000000000248e1f8,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libgmp-10.dll+0x60f20]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  CGAL.Mesh_2.CGAL_Mesh_2JNI.Default_Delaunay_mesher_2_refine_mesh(JLCGAL/Mesh_2/Default_Delaunay_mesher_2;)V+0
+j  CGAL.Mesh_2.Default_Delaunay_mesher_2.refine_mesh()V+5
+j  Main.main([Ljava/lang/String;)V+187
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001df46800 JavaThread "Service Thread" daemon [_thread_blocked, id=16004, stack(0x000000001f950000,0x000000001fa50000)]
+  0x000000001dea0000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=27740, stack(0x000000001f850000,0x000000001f950000)]
+  0x000000001de9c000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=24836, stack(0x000000001f750000,0x000000001f850000)]
+  0x000000001de9b800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=9640, stack(0x000000001f650000,0x000000001f750000)]
+  0x000000001de98000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=14884, stack(0x000000001f550000,0x000000001f650000)]
+  0x000000001de87800 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=21296, stack(0x000000001f450000,0x000000001f550000)]
+  0x000000001ddef800 JavaThread "Attach Listener" daemon [_thread_blocked, id=24152, stack(0x000000001f350000,0x000000001f450000)]
+  0x000000001ddd8800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26392, stack(0x000000001f250000,0x000000001f350000)]
+  0x000000001ddd3000 JavaThread "Finalizer" daemon [_thread_blocked, id=12120, stack(0x000000001f050000,0x000000001f150000)]
+  0x000000001c6dd800 JavaThread "Reference Handler" daemon [_thread_blocked, id=25152, stack(0x000000001ef50000,0x000000001f050000)]
+=>0x00000000029c2800 JavaThread "main" [_thread_in_native, id=2268, stack(0x0000000002390000,0x0000000002490000)]
+
+Other Threads:
+  0x000000001ddb2800 VMThread [stack: 0x000000001ee50000,0x000000001ef50000] [id=140]
+  0x000000001df69000 WatcherThread [stack: 0x000000001fa50000,0x000000001fb50000] [id=8832]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 75776K, used 6627K [0x000000076b600000, 0x0000000770a80000, 0x00000007c0000000)
+  eden space 65024K, 10% used [0x000000076b600000,0x000000076bc78f08,0x000000076f580000)
+  from space 10752K, 0% used [0x0000000770000000,0x0000000770000000,0x0000000770a80000)
+  to   space 10752K, 0% used [0x000000076f580000,0x000000076f580000,0x0000000770000000)
+ ParOldGen       total 173568K, used 0K [0x00000006c2200000, 0x00000006ccb80000, 0x000000076b600000)
+  object space 173568K, 0% used [0x00000006c2200000,0x00000006c2200000,0x00000006ccb80000)
+ Metaspace       used 3904K, capacity 4922K, committed 5120K, reserved 1056768K
+  class space    used 397K, capacity 426K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x0000000011e80000,0x0000000012670000] byte_map_base: 0x000000000e86f000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005aa0b6d0
+ Begin Bits: [0x00000000135c0000, 0x0000000017538000)
+ End Bits:   [0x0000000017538000, 0x000000001b4b0000)
+
+Polling page: 0x0000000000ae0000
+
+CodeCache: size=245760Kb used=1222Kb max_used=1222Kb free=244538Kb
+ bounds [0x0000000002ac0000, 0x0000000002d30000, 0x0000000011ac0000]
+ total_blobs=356 nmethods=70 adapters=199
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.171 Thread 0x000000001dea0000   66       3       java.util.Vector::elementData (7 bytes)
+Event: 0.171 Thread 0x000000001dea0000 nmethod 66 0x0000000002bf05d0 code [0x0000000002bf0720, 0x0000000002bf08b0]
+Event: 0.173 Thread 0x000000001dea0000   67       3       sun.misc.MetaIndex::mayContain (51 bytes)
+Event: 0.174 Thread 0x000000001dea0000 nmethod 67 0x0000000002bf0990 code [0x0000000002bf0b40, 0x0000000002bf11d8]
+Event: 0.174 Thread 0x000000001dea0000   69       3       java.io.File::isInvalid (47 bytes)
+Event: 0.174 Thread 0x000000001dea0000 nmethod 69 0x0000000002bf1490 code [0x0000000002bf1600, 0x0000000002bf1a48]
+Event: 0.174 Thread 0x000000001dea0000   68       3       java.nio.charset.CharsetEncoder::maxBytesPerChar (5 bytes)
+Event: 0.174 Thread 0x000000001dea0000 nmethod 68 0x0000000002bf1b50 code [0x0000000002bf1ca0, 0x0000000002bf1df0]
+Event: 0.174 Thread 0x000000001dea0000   70       1       java.net.URL::getQuery (5 bytes)
+Event: 0.174 Thread 0x000000001dea0000 nmethod 70 0x0000000002bf1e50 code [0x0000000002bf1fa0, 0x0000000002bf20b0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.037 Thread 0x00000000029c2800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076b607ca8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\
+Event: 0.037 Thread 0x00000000029c2800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076b607f90) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims
+
+Events (10 events):
+Event: 0.164 loading class CGAL/Kernel/Point_2
+Event: 0.164 loading class CGAL/Kernel/Point_2 done
+Event: 0.165 loading class CGAL/Kernel/CGAL_KernelJNI
+Event: 0.165 loading class CGAL/Kernel/CGAL_KernelJNI done
+Event: 0.170 loading class CGAL/Mesh_2/Mesh_2_Constrained_Delaunay_triangulation_2_Vertex_handle
+Event: 0.170 loading class CGAL/Mesh_2/Mesh_2_Constrained_Delaunay_triangulation_2_Vertex_handle done
+Event: 0.172 loading class CGAL/Mesh_2/Default_Delaunay_mesher_2
+Event: 0.172 loading class CGAL/Mesh_2/Default_Delaunay_mesher_2 done
+Event: 0.173 loading class CGAL/Mesh_2/Delaunay_mesh_size_criteria_2
+Event: 0.173 loading class CGAL/Mesh_2/Delaunay_mesh_size_criteria_2 done
+
+
+Dynamic libraries:
+0x00007ff7ea840000 - 0x00007ff7ea877000 	C:\Program Files\Java\jdk1.8.0_121\bin\java.exe
+0x00007ff9c5cf0000 - 0x00007ff9c5eee000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9c4110000 - 0x00007ff9c41cc000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9c36a0000 - 0x00007ff9c39e0000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9bdd60000 - 0x00007ff9bddf2000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff9c3f60000 - 0x00007ff9c400b000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9c3d70000 - 0x00007ff9c3e12000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9c3c10000 - 0x00007ff9c3cb2000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9c4a10000 - 0x00007ff9c4b33000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9c5650000 - 0x00007ff9c57f5000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9c3310000 - 0x00007ff9c3336000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9c3d40000 - 0x00007ff9c3d6b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9c3340000 - 0x00007ff9c344b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9c3260000 - 0x00007ff9c3307000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9c34c0000 - 0x00007ff9c35d3000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9ac500000 - 0x00007ff9ac7a6000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.20175.1000_none_8e9f0e64aa406c8e\COMCTL32.dll
+0x00007ff9c41d0000 - 0x00007ff9c4201000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000005aa90000 - 0x000000005ab62000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\msvcr100.dll
+0x000000005a1f0000 - 0x000000005aa8b000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\server\jvm.dll
+0x00007ff9c5640000 - 0x00007ff9c5648000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9b8610000 - 0x00007ff9b861a000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9b3e60000 - 0x00007ff9b3e86000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9c4c00000 - 0x00007ff9c4c71000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff9b9b10000 - 0x00007ff9b9b1a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x000000005c630000 - 0x000000005c63f000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\verify.dll
+0x000000005a1c0000 - 0x000000005a1e9000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\java.dll
+0x000000005a170000 - 0x000000005a193000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\instrument.dll
+0x000000005a1a0000 - 0x000000005a1b6000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\zip.dll
+0x00007ff9c4210000 - 0x00007ff9c49a3000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ff9c11d0000 - 0x00007ff9c1a70000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ff9c5800000 - 0x00007ff9c5b7d000 	C:\WINDOWS\System32\combase.dll
+0x00007ff9c4c80000 - 0x00007ff9c4d42000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ff9c4db0000 - 0x00007ff9c4e07000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ff9c31a0000 - 0x00007ff9c31c0000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ff9bed10000 - 0x00007ff9bed2a000 	C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\bin\breakgen64.dll
+0x000000005a150000 - 0x000000005a16a000 	C:\Program Files\Java\jdk1.8.0_121\jre\bin\net.dll
+0x00007ff9c2980000 - 0x00007ff9c29e8000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ff9bc020000 - 0x00007ff9bc034000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Java_cpp.dll
+0x00007ff9bed00000 - 0x00007ff9bed0f000 	C:\WINDOWS\SYSTEM32\VCRUNTIME140_1D.dll
+0x00007ff9bbff0000 - 0x00007ff9bc016000 	C:\WINDOWS\SYSTEM32\VCRUNTIME140D.dll
+0x00007ff95f030000 - 0x00007ff95f1f3000 	C:\WINDOWS\SYSTEM32\ucrtbased.dll
+0x000000006f540000 - 0x000000006f5a1000 	C:\dev\CGAL-5.0.3\auxiliary\gmp\lib\libmpfr-4.dll
+0x000000006acc0000 - 0x000000006ad46000 	C:\Program Files\Git\mingw64\bin\libgmp-10.dll
+0x00007ff92e030000 - 0x00007ff92e44a000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Kernel_cpp.dll
+0x00007ff99cf30000 - 0x00007ff99d024000 	C:\WINDOWS\SYSTEM32\MSVCP140D.dll
+0x00007ff9bbf30000 - 0x00007ff9bbf67000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_AABB_tree_cpp.dll
+0x00007ff9b8a30000 - 0x00007ff9b8a67000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Alpha_shape_2_cpp.dll
+0x00007ff9b7d30000 - 0x00007ff9b7d67000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Mesh_3_cpp.dll
+0x00007ff9ac0d0000 - 0x00007ff9ac107000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Surface_mesher_cpp.dll
+0x00007ff9ac090000 - 0x00007ff9ac0c7000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Triangulation_2_cpp.dll
+0x00007ff9a6b90000 - 0x00007ff9a6bc7000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug\CGAL_Triangulation_3_cpp.dll
+0x00007ff92db70000 - 0x00007ff92e021000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\build-java\lib\CGAL_Mesh_2.dll
+0x00007ff9b87b0000 - 0x00007ff9b87c9000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\build-java\lib\CGAL_Java.dll
+0x00007ff9390a0000 - 0x00007ff939258000 	E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\build-java\lib\CGAL_Kernel.dll
+0x00007ff9c1b50000 - 0x00007ff9c1d51000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ff9c3a30000 - 0x00007ff9c3aa9000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -Djava.library.path=E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\lib\Debug;E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\build-java\lib;E:\amomorning\eclipse-workspace\cgal-swig-bindings\build\build-java\lib\Debug;C:\dev\CGAL-5.0.3\auxiliary\gmp\lib -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\lib\idea_rt.jar=3638:C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\bin -Dfile.encoding=UTF-8 
+java_command: Main
+java_class_path (initial): C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;D:\amomorning\eclipse-workspace\testCGAL\target\classes;C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\lib\idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_121\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_121\lib\tools.jar;
+PATH=C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\MATLAB\R2019b\bin;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\dotnet\;C:\Program Files\CMake\bin;C:\Users\amomorning\vcpkg;C:\Program Files\PowerShell\6\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\amomorning\Anaconda3;C:\Users\amomorning\Anaconda3\Library\mingw-w64\bin;C:\Users\amomorning\Anaconda3\Library\usr\bin;C:\Users\amomorning\Anaconda3\Library\bin;C:\Users\amomorning\Anaconda3\Scripts;C:\Users\amomorning\AppData\Local\Microsoft\WindowsApps;C:\Users\amomorning\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Bandizip\;C:\Program Files\mingw-w64\mingw64\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\Users\amomorning\AppData\Local\JuliaPro-1.2.0-1\Julia-1.2.0\bin;C:\Users\amomorning\.dotnet\tools;C:\Users\amomorning\vcpkg;C:\Users\amomorning\AppData\Local\Programs\Fiddler;C:\Users\amomorning\AppData\Local\Microsoft\WindowsApps;C:\Users\amomorning\AppData\Roaming\npm;D:\dev\swigwin-3.0.12;D:\dev\boost_1_71_0\lib64-msvc-14.2;D:\dev\Qt\5.15.0\msvc2019_64\bin;
+USERNAME=amomorning
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 20175 (10.0.20175.1000)
+
+CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16635088k(7765340k free), swap 22245068k(3976348k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.121-b13) for windows-amd64 JRE (1.8.0_121-b13), built on Dec 12 2016 18:21:36 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Sep 03 20:59:13 2020
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
