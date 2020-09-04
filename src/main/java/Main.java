@@ -1,5 +1,3 @@
-import CGAL.Kernel.Point_2;
-import CGAL.Mesh_2.*;
 import CGAL.Point_set_3.Point_set_3;
 import CGAL.Point_set_3.Point_set_3_Int_map;
 import CGAL.Shape_detection.CGAL_Shape_detection;
